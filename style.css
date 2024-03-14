@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=McLaren&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Encode+Sans+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=McLaren&display=swap');
 :root {
     --cor-de-fundo: #1048bb;
     --roxo: #eb57ff;
@@ -8,9 +10,11 @@
 }
 
 body {
-    background-color: var(--cor-de-fundo);
+    background-image:  url("img/euro.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
     color: var(--branco);
-    font-family: 'Chakra Petch', sans-serif;
+    
 }
 
 .conteudo-principal {
@@ -27,6 +31,7 @@ body {
     text-align: left;
     width: 100%;
     font-size: 32px;
+    font-family: 'McLaren';
 }
 
 .titulo-principal span {
@@ -44,6 +49,7 @@ body {
     color: #fdd204;
     text-align: center;
     font-size: 20px;
+    font-family:"McLaren" ;
 }
 #regressiva{
     color: var(--branco);
@@ -66,14 +72,45 @@ body {
     border-top: none;
 
 }
-
+.conteudo{
+    font-family: "Encode Sans Semi Condensed";
+    
+}
 .botoes {
     display: block;
+    
+    
+
 }
 
 .botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--roxo);
+}
+
+.abas-textos{
+    background-color: var(--texto-fundo);
+    padding: 50px 220px;
+    border-radius: 0 0 40px 40px;
+}
+
+.aba-conteudo.ativo{
+    display: block; /*Mostra a aba ativa*/
+}
+
+.aba-conteudo{
+    display: none;
+}
+
+.aba-conteudo-titulo-principal{
+    font-size: 28px;
+    text-align: center;
+}
+
+.aba-conteudo-titulo-secundario{
+    text-align: center;
+    color:var(--roxo);
+    text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
@@ -86,16 +123,16 @@ body {
 
     }
 }
-    @media screen and (min-width: 768px) {
-        .botoes {
+@media screen and (min-width: 768px) {
+    .botoes {
             display: flex;
-        }
-
-        .botao:first-child {
-            border-radius: 40px 0 0 0;
-        }
-
-        .botao:last-child {
-            border-radius: 0 40px 0 0;
-        }
     }
+
+    .botao:first-child {
+            border-radius: 40px 0 0 0;
+     }
+
+    .botao:last-child {
+            border-radius: 0 40px 0 0;
+     }
+ }
