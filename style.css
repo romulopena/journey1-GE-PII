@@ -56,7 +56,7 @@ body {
 }
 
 .botao {
-    font-family: "Chakra Petch", sans-serif;
+    font-family: "Encode+Sans+Semi+Condensed";
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -73,7 +73,7 @@ body {
 
 }
 .conteudo{
-    font-family: "Encode Sans Semi Condensed";
+   
     
 }
 .botoes {
