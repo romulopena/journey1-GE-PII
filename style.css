@@ -90,7 +90,7 @@ body {
 
 .abas-textos{
     background-color: var(--texto-fundo);
-    padding: 50px 220px;
+    padding: 20px;
     border-radius: 0 0 40px 40px;
 }
 
