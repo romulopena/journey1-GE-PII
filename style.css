@@ -4,10 +4,12 @@
     --cor-de-fundo: #1048bb;
     --roxo: #eb57ff;
     --branco: #FFFFFF;
+    --amarelo: #d1c408;
     --botao-ativo: #3A375E;
     --botao-inativo: #3a375e80;
     --texto-fundo: #3a375e4d;
 }
+
 
 body {
     background-image:  url("img/euro.png");
@@ -46,7 +48,7 @@ body {
 }
 
 .subtitulo-principal{
-    color: #fdd204;
+    color: var(--amarelo)
     text-align: center;
     font-size: 20px;
     font-family:"McLaren" ;
@@ -56,7 +58,7 @@ body {
 }
 
 .botao {
-    font-family: "Chakra Petch", sans-serif;
+    font-family: "Encode+Sans+Semi+Condensed";
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -70,27 +72,35 @@ body {
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
-
 }
-.conteudo{
-    font-family: "Encode Sans Semi Condensed";
-    
-}
+  
 .botoes {
     display: block;
     
-    
-
 }
 
-.botao.ativo{
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
+}
+
+ .botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--roxo);
 }
 
-.abas-textos{
+ .abas-textos{
     background-color: var(--texto-fundo);
-    padding: 50px 220px;
+    padding: 40px;
     border-radius: 0 0 40px 40px;
 }
 
@@ -113,26 +123,9 @@ body {
     text-transform: uppercase;
 }
 
-@media screen and (min-width: 768px) {
-    .botoes {
-        display: flex;
-    }
-
-    .botao:first-child {
-        border-radius: 40px 40px 0 0;
-
-    }
+.contador{
+    text-align: center;
+    font-size: 40px;
+    color: var(--amarelo);
+    font-family: "McLaren";
 }
-@media screen and (min-width: 768px) {
-    .botoes {
-            display: flex;
-    }
-
-    .botao:first-child {
-            border-radius: 40px 0 0 0;
-     }
-
-    .botao:last-child {
-            border-radius: 0 40px 0 0;
-     }
- }
