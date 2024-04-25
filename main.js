@@ -11,16 +11,16 @@ for (let i = 0; i < botoes.length; i++){
     }
 }
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2024-10-05T00:00:00");
-const tempoObjetivo2 = new Date("2024-12-05T00:00:00");
-const tempoObjetivo3 = new Date("2024-09-05T00:00:00");
-const tempoObjetivo4 = new Date("2024-08-05T00:00:00");
+const prazoViagem1 = new Date("2024-10-05T00:00:00");
+const prazoViagem2 = new Date("2024-12-05T00:00:00");
+const prazoViagem3 = new Date("2024-09-05T00:00:00");
+const prazoViagem4 = new Date("2024-08-05T00:00:00");
 
-const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4];
+const prazos = [prazoViagem1, prazoViagem2, prazoViagem3, prazoViagem4];
 
-function calculaTempo(tempoObjetivo) {
+function calculaTempo(prazoViagem) {
     let tempoAtual = new Date();
-    let tempoFinal = tempoObjetivo - tempoAtual;
+    let tempoFinal = prazoViagem - tempoAtual;
     let segundos = Math.floor(tempoFinal / 1000);
     let minutos = Math.floor(segundos / 60);
     let horas = Math.floor(minutos / 60);
@@ -38,13 +38,13 @@ function calculaTempo(tempoObjetivo) {
 
 function atualizaContagem(){
     for (let i = 0; i < contadores.length; i++){
-        contadores[i].textContent = calculaTempo(tempos[i]);
+        contadores[i].textContent = calculaTempo(prazos[i]);
 
     }
 }
 
 function iniciaContagem(){
-    atualizaContagem();
+    //atualizaContagem();  "como a função será chamada como parâmetro de SetInterval, não há necessidade de chamá-la antes."
     setInterval(atualizaContagem, 1000);
 }
 iniciaContagem();
