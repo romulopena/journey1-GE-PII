@@ -127,8 +127,10 @@ body {
 .contador{
     text-align: center;
     font-size: 40px;
-    color: var(--amarelo);
+    color: var(--branco);
     font-family: "McLaren";
+    display:flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 768px){
@@ -139,3 +141,19 @@ body {
         font-family: "McLaren";
     }
 }
+
+.contador-digito{
+    padding: 0 16px;
+    min-width: 100px;
+}
+
+.contador-digito-numero{
+    font-size: 80px;
+    margin: 0;
+}
+
+.contador-digito-texto{
+    color: var(--amarelo);
+    margin: 0;
+}
+
